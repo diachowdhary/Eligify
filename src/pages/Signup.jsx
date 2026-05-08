@@ -44,8 +44,6 @@ const Signup = () => {
 
     e.preventDefault();
 
-    // CHECK EXISTING USER
-
     const existingUser =
       JSON.parse(
         localStorage.getItem(
@@ -64,9 +62,6 @@ const Signup = () => {
 
       return;
     }
-
-    // SAVE USER
-
     localStorage.setItem(
       "eligifyUser",
       JSON.stringify(
@@ -74,7 +69,6 @@ const Signup = () => {
       )
     );
 
-    // LOGIN USER
 
     login(formData);
 
@@ -105,8 +99,6 @@ const Signup = () => {
           className="auth-form"
         >
 
-          {/* NAME */}
-
           <input
             type="text"
             placeholder="Full Name"
@@ -122,9 +114,6 @@ const Signup = () => {
               })
             }
           />
-
-          {/* EMAIL */}
-
           <input
             type="email"
             placeholder="Email"
@@ -140,8 +129,6 @@ const Signup = () => {
               })
             }
           />
-
-          {/* PASSWORD */}
 
           <div
             className="password-box"
@@ -185,17 +172,12 @@ const Signup = () => {
 
           </div>
 
-          {/* ERROR */}
-
           {error && (
 
             <p className="error-text">
               {error}
             </p>
           )}
-
-          {/* BUTTON */}
-
           <button
             className="primary-btn"
             type="submit"
