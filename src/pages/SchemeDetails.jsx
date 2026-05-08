@@ -53,8 +53,6 @@ const SchemeDetails = () => {
           ← Back to matches
         </Link>
 
-        {/* HERO */}
-
         <div className="details-hero">
 
           <div className="details-top">
@@ -108,7 +106,6 @@ const SchemeDetails = () => {
           </div>
         </div>
 
-        {/* SIMPLE WORDS */}
 
         <div className="info-card">
 
@@ -122,12 +119,8 @@ const SchemeDetails = () => {
             }
           </p>
         </div>
-
-        {/* GRID */}
-
         <div className="details-grid">
 
-          {/* BENEFITS */}
 
           <div className="info-card">
 
@@ -144,7 +137,6 @@ const SchemeDetails = () => {
             </ul>
           </div>
 
-          {/* DOCUMENTS */}
 
           <div className="info-card">
 
@@ -171,7 +163,6 @@ const SchemeDetails = () => {
           </div>
         </div>
 
-        {/* ELIGIBILITY */}
 
         <div className="info-card">
 
@@ -197,7 +188,6 @@ const SchemeDetails = () => {
           </ul>
         </div>
 
-        {/* APPLY STEPS */}
 
         <div className="info-card">
 
