@@ -1,4 +1,3 @@
-
 import "./SchemeDetails.css";
 
 import {
@@ -12,9 +11,7 @@ import {
 } from "../context/AppContext";
 
 const SchemeDetails = () => {
-
   const { id } = useParams();
-
   const {
     savedSchemes,
     toggleSaveScheme,
