@@ -16,50 +16,30 @@ const AppContext =
 
 export const AppProvider =
   ({ children }) => {
-
-    // USER
-
     const [
       currentUser,
       setCurrentUser,
     ] = useState(null);
-
-    // AUTH
 
     const [
       isAuthenticated,
       setIsAuthenticated,
     ] = useState(false);
 
-    // ANSWERS
-
     const [
       userAnswers,
       setUserAnswers,
     ] = useState({});
-
-    // RESULTS
-
     const [
       matchedSchemes,
       setMatchedSchemes,
     ] = useState([]);
-
-    // SAVED
-
     const [
       savedSchemes,
       setSavedSchemes,
     ] = useState([]);
 
-    // ======================
-    // LOAD FROM LOCAL STORAGE
-    // ======================
-
     useEffect(() => {
-
-      // USER
-
       const storedUser =
         localStorage.getItem(
           "eligifyUser"
@@ -81,8 +61,6 @@ export const AppProvider =
         );
       }
 
-      // ANSWERS
-
       const storedAnswers =
         localStorage.getItem(
           "eligifyAnswers"
@@ -98,9 +76,6 @@ export const AppProvider =
           )
         );
       }
-
-      // SAVED
-
       const storedSaved =
         localStorage.getItem(
           "savedSchemes"
@@ -118,11 +93,6 @@ export const AppProvider =
       }
 
     }, []);
-
-    // ======================
-    // LOGIN
-    // ======================
-
     const login =
       (userData) => {
 
@@ -142,10 +112,6 @@ export const AppProvider =
         );
       };
 
-    // ======================
-    // SIGNUP
-    // ======================
-
     const signup =
       (userData) => {
 
@@ -164,11 +130,6 @@ export const AppProvider =
           )
         );
       };
-
-    // ======================
-    // LOGOUT
-    // ======================
-
     const logout =
       () => {
 
@@ -184,11 +145,6 @@ export const AppProvider =
           "eligifyUser"
         );
       };
-
-    // ======================
-    // RESULTS
-    // ======================
-
     const generateResults =
       () => {
 
@@ -202,10 +158,6 @@ export const AppProvider =
           results
         );
       };
-
-    // ======================
-    // SAVE SCHEME
-    // ======================
 
  const toggleSaveScheme = (scheme) => {
 
@@ -266,7 +218,6 @@ export const AppProvider =
           toggleSaveScheme,
         }}
       >
-
         {children}
 
       </AppContext.Provider>
